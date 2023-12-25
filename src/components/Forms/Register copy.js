@@ -14,12 +14,12 @@ const Register = () => {
   const { fullname, email, password } = formData;
 
   //onChange
-  const onChangeInput = (e) => {
+  const onChangeInput = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   //Handle submit
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = e => {
     e.preventDefault();
     if (!email || !password || !fullname) {
       return alert("Please provide all details");
@@ -29,11 +29,11 @@ const Register = () => {
 
   return (
     <>
-      <section className="py-24 md:py-32 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2017/08/30/07/56/clock-2696234_1280.jpg')", minHeight: "100vh",backgroundSize: "100% 100%" }}>
+      <section className="py-24 md:py-32 bg-white">
         <div className="container px-4 mx-auto">
           <div className="max-w-sm mx-auto">
             <div className="mb-6 text-center">
-              <h3 className="mb-4 text-2xl md:text-3xl font-bold text-color-green">
+              <h3 className="mb-4 text-2xl md:text-3xl font-bold">
                 Register for an account
               </h3>
             </div>
@@ -51,7 +51,7 @@ const Register = () => {
                   name="email"
                   className="appearance-none block w-full p-3 leading-5 text-coolGray-900 border border-coolGray-200 rounded-lg shadow-sm placeholder-coolGray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
                   type="email"
-                  placeholder="mubashir@gmail.com"
+                  placeholder="i-novotek@gmail.com"
                 />
               </div>
               <div className="mb-6">
@@ -67,7 +67,7 @@ const Register = () => {
                   name="fullname"
                   className="appearance-none block w-full p-3 leading-5 text-coolGray-900 border border-coolGray-200 rounded-lg shadow-sm placeholder-coolGray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
                   type="text"
-                  placeholder="Mubashir Shariq"
+                  placeholder="I-Nooovotek Academy"
                 />
               </div>
               <div className="mb-4">
@@ -88,15 +88,14 @@ const Register = () => {
               </div>
               <div className="flex flex-wrap items-center justify-between mb-6"></div>
               <button
-                className="inline-block py-3 px-7 mb-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md shadow-sm "
+                className="inline-block py-3 px-7 mb-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md shadow-sm"
                 type="submit"
               >
                 Register
               </button>
               <p className="text-center">
-                <span className="text-l font-medium">
-             
-                  Already have an account? <a className="inline-block text-l font-medium text-green-500 hover:text-green-600 hover:underline"><Link  to="/login">Sign in</Link></a>
+                <span className="text-xs font-medium">
+                  Already have an account? <Link to="/login">Sign in</Link>
                 </span>
               </p>
             </form>

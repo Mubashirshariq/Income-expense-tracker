@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <section className="relative bg-slate-300 overflow-hidden">
+      <section className="relative bg-white overflow-hidden">
         <div className="bg-tarnsparent">
           <div className="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
             <div className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
@@ -29,7 +29,7 @@ const Header = () => {
             <div className="flex flex-wrap xl:items-center -mx-4">
               <div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">
                 <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-green-500 uppercase rounded-9xl">
-                  FinTrack
+                  PROJECT INCOME-EXPENSES TRACKER
                 </span>
                 <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tight">
                   Track Your Income and Expenses in One Place
@@ -42,24 +42,20 @@ const Header = () => {
                 </p>
                 <div className="flex flex-wrap">
                   <div className="w-full md:w-auto py-1 md:py-0 md:mr-4">
-                  <a href="#_" class="relative inline-block text-lg group">
-                      <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-                      <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-                      <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-                      <span class="relative">Request a Demo</span>
-                      </span>
-                      <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
-                      </a>
+                    <a
+                      className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-green-50 font-medium text-center bg-green-500 hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-green-500 rounded-md shadow-sm"
+                      href="#"
+                    >
+                      Request a Demo
+                    </a>
                   </div>
                   <div className="w-full md:w-auto py-1 md:py-0">
-                  <a href="/register" class="relative inline-block text-lg group">
-                      <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-                      <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-                      <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-                      <span class="relative">Sign Up</span>
-                      </span>
-                      <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
-                      </a>
+                    <a
+                      className="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-coolGray-800 font-medium text-center bg-white hover:bg-coolGray-100 focus:ring-2 focus:ring-coolGray-200 focus:ring-opacity-50 border border-coolGray-200 rounded-md shadow-sm"
+                      href="#"
+                    >
+                      Sign Up
+                    </a>
                   </div>
                 </div>
               </div>
@@ -67,7 +63,7 @@ const Header = () => {
                 <div className="relative mx-auto md:mr-0 max-w-max">
                   <img
                     className="relative rounded-7xl"
-                    src="https://cdn.pixabay.com/photo/2017/04/08/10/33/money-2212965_1280.jpg"
+                    src="https://cdn.pixabay.com/photo/2015/01/28/22/20/bookkeeping-615384_1280.jpg"
                     alt="landing"
                   />
                 </div>

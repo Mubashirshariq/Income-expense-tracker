@@ -25,10 +25,12 @@ const Login = () => {
   console.log(userAuth);
   return (
     <>
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container px-4 mx-auto">
+      <section className="py-24 md:py-32 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2017/08/30/07/56/clock-2696234_1280.jpg')", minHeight: "100vh",backgroundSize: "100% 100%" }}>
+
+     
           <div className="max-w-sm mx-auto">
-            <div className="mb-6 text-center">
+        <div className="container px-4 mx-auto shadow-md">
+            <div className="mb-6 text-center ">
               <h3 className="mb-4 text-2xl md:text-3xl font-bold">
                 Sign in to your account
               </h3>
@@ -41,7 +43,7 @@ const Login = () => {
             <form onSubmit={onSubmitHandler}>
               <div className="mb-6">
                 <label
-                  className="block mb-2 text-coolGray-800 font-medium"
+                  className="block mb-2 text-coolGray-800 font-medium text-xl"
                   htmlFor
                 >
                   Email
@@ -52,12 +54,12 @@ const Login = () => {
                   name="email"
                   className="appearance-none block w-full p-3 leading-5 text-coolGray-900 border border-coolGray-200 rounded-lgshadow-md placeholder-coolGray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
                   type="email"
-                  placeholder="i-novotek@gmail.com"
+                  placeholder="mubashir@gmail.com"
                 />
               </div>
               <div className="mb-4">
                 <label
-                  className="block mb-2 text-coolGray-800 font-medium"
+                  className="block mb-2 text-coolGray-800 font-medium text-xl"
                   htmlFor
                 >
                   Password
@@ -88,19 +90,15 @@ const Login = () => {
                 Sign In
               </button>
               <p className="text-center">
-                <span className="text-xs font-medium">
-                  Don’t have an account? <a href="#">Sign up</a>
+                <span className="text-l font-medium ">
+                  Don’t have an account? <a  className="inline-block text-l font-medium text-green-500 hover:text-green-600 hover:underline" href="/register">Sign up</a>
                 </span>
-                <button
-                  className="inline-block text-xs font-medium text-green-500 hover:text-green-600 hover:underline"
-                  type="submit"
-                >
-                  Sign up
-                </button>
               </p>
             </form>
           </div>
+          
         </div>
+       
       </section>
     </>
   );

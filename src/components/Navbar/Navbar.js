@@ -10,11 +10,11 @@ export default function Navbar() {
   const { logoutUserAction, token } = useContext(authContext);
 
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-yellow-700">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-16 justify-between">
+            <div className="flex h-20 justify-between">
               <div className="flex">
                 <div className="-ml-2 mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
@@ -31,7 +31,7 @@ export default function Navbar() {
                   <img
                     className="block h-8 w-auto lg:hidden"
                     src={logo}
-                    alt="i-novotek"
+                    alt="FinTrack"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
@@ -42,7 +42,7 @@ export default function Navbar() {
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
                   <Link
                     to="/"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
                   >
                     Home
                   </Link>
@@ -51,13 +51,13 @@ export default function Navbar() {
                     <>
                       <Link
                         to="/add-transaction"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
                       >
                         Add Transaction
                       </Link>
                       <Link
                         to="/dashboard"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
                       >
                         Dashboard
                       </Link>
@@ -68,28 +68,27 @@ export default function Navbar() {
                     <>
                       <Link
                         to="/login"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
                       >
                         Login
                       </Link>
                       <Link
                         to="/register"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
                       >
                         Register
                       </Link>
                     </>
                   )}
-                  <>
-                    {token && (
-                      <button
-                        onClick={logoutUserAction}
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                      >
-                        Logout
-                      </button>
-                    )}
-                  </>
+
+                  {token && (
+                    <button
+                      onClick={logoutUserAction}
+                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
+                    >
+                      Logout
+                    </button>
+                  )}
                 </div>
               </div>
               {!token && (
@@ -97,7 +96,7 @@ export default function Navbar() {
                   <div className="flex-shrink-0">
                     <Link
                       to="/dashboard"
-                      className="relative inline-flex items-center rounded-md border border-transparent bg-indigo-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+                      className="relative inline-flex items-center rounded-md border border-transparent bg-indigo-500 px-4 py-3 text-lg font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800" // Increased font size and padding
                     >
                       <PlusIcon
                         className="-ml-1 mr-2 h-5 w-5"
@@ -116,7 +115,7 @@ export default function Navbar() {
             <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
               <Link
                 to="/"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
               >
                 Home
               </Link>
@@ -124,36 +123,33 @@ export default function Navbar() {
               {token && (
                 <Link
                   to="/dashboard"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
                 >
                   Dashboard
                 </Link>
               )}
 
-              <>
-                {!token && (
-                  <>
-                    {" "}
-                    <Link
-                      to="/login"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      to="/register"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                      Register
-                    </Link>
-                  </>
-                )}
-              </>
+              {!token && (
+                <>
+                  <Link
+                    to="/login"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/register"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
+                  >
+                    Register
+                  </Link>
+                </>
+              )}
 
               {token && (
                 <button
                   onClick={logoutUserAction}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-4 py-3 rounded-md text-lg font-medium" // Increased font size and padding
                 >
                   Logout
                 </button>
